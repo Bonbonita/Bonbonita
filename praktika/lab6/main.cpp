@@ -3,7 +3,7 @@
 Необхідно  використовувати  два  аргументи  командної стрічки -вихідний файл і файл призначення.
 Наприклад:С: \>ocopy srcfile.cpp destfile.
 cppЗдійснюйте  перевірку  числа  аргументів  командного  рядка  і  можливість
-відкриття  вказаних користувачем файлів.#include <iostream>
+відкриття  вказаних користувачем файлів.
 */
 #include <iostream>
 #include <fstream>
@@ -11,19 +11,20 @@ cppЗдійснюйте  перевірку  числа  аргументів  �
 
 using namespace std;
 
-int main () {
-    ifstream in("/home/kachurovsky/workBanch/2BURSA/321_Projects/praktika/lab6/Math.pow(tilt,Infinity).txt");
-    ofstream out("/home/kachurovsky/workBanch/2BURSA/321_Projects/praktika/lab6/tilt.txt");
-    if (!out.is_open())
-    {
-        std::cout << "ERROR: Can not open document2.txt" << std::endl;
-        return -1;
+int main() {
+    ifstream in("/home/kachurovsky/workBanch/2BURSA/321_Projects/oop/praktika/lab6/Math.pow(tilt,Infinity).txt");
+    ofstream out("/home/kachurovsky/workBanch/2BURSA/321_Projects/oop/praktika/lab6/tilt.txt");
+    if (!out.is_open()) {
+        cout << "ERROR: Can not open tilt.txt" << endl;
+        return 0;
     }
 
     string str;
+
     while (getline(in, str));
     {
-        out<<str;
+        cout<<"sentence: "<<str<<endl;
+        out << str;
     }
     in.close();
     out.close();
