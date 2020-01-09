@@ -1,16 +1,7 @@
-/*
-Напишіть програму, яка емулює команду COPY (MS DOS). Тобто програма повинна копіювати  вміст  одного  файлу  в  іншій.
-Необхідно  використовувати  два  аргументи  командної стрічки -вихідний файл і файл призначення.
-Наприклад:С: \>ocopy srcfile.cpp destfile.
-cppЗдійснюйте  перевірку  числа  аргументів  командного  рядка  і  можливість
-відкриття  вказаних користувачем файлів.
-*/
 #include <iostream>
 #include <fstream>
 #include <string>
-
 using namespace std;
-
 int main() {
     ifstream in("/home/kachurovsky/workBanch/2BURSA/321_Projects/oop/praktika/lab6/Math.pow(tilt,Infinity).txt");
     ofstream out("/home/kachurovsky/workBanch/2BURSA/321_Projects/oop/praktika/lab6/tilt.txt");
@@ -18,9 +9,7 @@ int main() {
         cout << "ERROR: Can not open tilt.txt" << endl;
         return 0;
     }
-
     string str;
-
     while (getline(in, str));
     {
         cout<<"sentence: "<<str<<endl;
